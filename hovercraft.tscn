@@ -3,8 +3,7 @@
 [ext_resource type="Script" path="res://hovercraft.gd" id="1_wpyu7"]
 [ext_resource type="Texture2D" uid="uid://oj6dm1igw15a" path="res://assets/sprites/hovercraft.png" id="1_xc66o"]
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
-y_sort_enabled = true
+[node name="hovercraft" type="CharacterBody2D"]
 motion_mode = 1
 script = ExtResource("1_wpyu7")
 
