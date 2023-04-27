@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://c762cws31nr32"]
+
+[ext_resource type="Script" path="res://tank.gd" id="1_g00yh"]
+[ext_resource type="Texture2D" uid="uid://oj6dm1igw15a" path="res://assets/sprites/hovercraft.png" id="1_xc66o"]
+
+[node name="tank" type="CharacterBody2D"]
+editor_description = "Z-Index is set to be the same layer as the blocks TileMap walls layer in the world.
+
+TODO(minkezhang): Find maybe a more elegant solution."
+z_index = 1
+motion_mode = 1
+script = ExtResource("1_g00yh")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_xc66o")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-12, 0, 0, -6, 12, 0, 0, 6)

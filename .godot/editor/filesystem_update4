@@ -1,3 +1,5 @@
-res://blocks.tscn
-res://world.tscn
 res://hovercraft.tscn
+res://tank.tscn
+res://world.tscn
+res://blocks.tscn
+res://tank.gd

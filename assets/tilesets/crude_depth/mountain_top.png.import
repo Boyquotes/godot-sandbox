@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://4v4skw468wtw"
-path="res://.godot/imported/mountain.png-9c48bc8caa59feef52904a7b1b421677.ctex"
+uid="uid://b1sjpt8nhwdls"
+path="res://.godot/imported/mountain_top.png-58ae574003892d1bec14144629d54107.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tilesets/crude_depth/mountain.png"
-dest_files=["res://.godot/imported/mountain.png-9c48bc8caa59feef52904a7b1b421677.ctex"]
+source_file="res://assets/tilesets/crude_depth/mountain_top.png"
+dest_files=["res://.godot/imported/mountain_top.png-58ae574003892d1bec14144629d54107.ctex"]
 
 [params]
 

@@ -11,10 +11,14 @@ texture_region_size = Vector2i(32, 32)
 1:0/0 = 0
 1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 1:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, -8, -16, 0, 0, 8, 16, 0)
 2:0/0 = 0
 2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 2:0/0/physics_layer_0/angular_velocity = 0.0
 2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, -8, -16, 0, 0, 8, 16, 0)
+3:0/0 = 0
+3:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:0/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSet" id="TileSet_0r5ki"]
 tile_shape = 1
@@ -23,9 +27,17 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_77mgy")
 
 [node name="TileMap" type="TileMap"]
+editor_description = "The walls layer is on a higher Z-Index than the terrain to ensure it is drawn on top of the base layer. Tanks and units should inhabit this layer to ensure the proper drawing order (which also depends on Y-Sort)."
 y_sort_enabled = true
 tile_set = SubResource("TileSet_0r5ki")
 cell_quadrant_size = 32
 format = 2
 layer_0/name = "terrain"
 layer_0/y_sort_enabled = true
+layer_1/name = "walls"
+layer_1/enabled = true
+layer_1/modulate = Color(1, 1, 1, 1)
+layer_1/y_sort_enabled = true
+layer_1/y_sort_origin = 0
+layer_1/z_index = 1
+layer_1/tile_data = PackedInt32Array()
