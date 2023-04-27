@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cigtcxl4disup"]
+
+[ext_resource type="Script" path="res://hovercraft.gd" id="1_wpyu7"]
+[ext_resource type="Texture2D" uid="uid://oj6dm1igw15a" path="res://assets/sprites/hovercraft.png" id="1_xc66o"]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+y_sort_enabled = true
+motion_mode = 1
+script = ExtResource("1_wpyu7")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_xc66o")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-12, 0, 0, -6, 12, 0, 0, 6)
