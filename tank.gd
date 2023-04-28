@@ -1,13 +1,12 @@
 extends CharacterBody2D
 
-const MOTION_SPEED = 48 # Pixels/second.
+@export var target: Vector2
+@export var speed: float = 48
 
 func _physics_process(_delta):
-	var motion = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
+	var dv = (target - position).normalized() * speed
+	dv.y /= 2  # Account for isometric geometry.
 	
-	# Make diagonal movement fit isometric tiles.
-	motion.y /= 2
-	
-	velocity = motion.normalized() * MOTION_SPEED
+	velocity = dv
 	
 	move_and_slide()

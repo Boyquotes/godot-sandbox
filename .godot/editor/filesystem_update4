@@ -1,3 +1,5 @@
 res://blocks.tscn
 res://world.tscn
 res://tank.tscn
+res://tank.gd
+res://world.gd
