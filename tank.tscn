@@ -8,6 +8,7 @@ editor_description = "Z-Index is set to be the same layer as the blocks TileMap 
 
 TODO(minkezhang): Find maybe a more elegant solution."
 z_index = 1
+collision_layer = 8
 motion_mode = 1
 script = ExtResource("1_g00yh")
 
