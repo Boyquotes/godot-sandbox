@@ -2,3 +2,5 @@ res://terrain.tscn
 res://world.tscn
 res://tank.tscn
 res://terrain.gd
+res://tank.gd
+res://world.gd

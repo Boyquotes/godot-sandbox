@@ -1,12 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://cpbb4s6kfrsmj"]
+[gd_scene load_steps=4 format=3 uid="uid://cpbb4s6kfrsmj"]
 
 [ext_resource type="Script" path="res://world.gd" id="1_wqaj6"]
+[ext_resource type="PackedScene" uid="uid://dvxywync4hi4l" path="res://terrain.tscn" id="2_caegw"]
 [ext_resource type="PackedScene" uid="uid://c762cws31nr32" path="res://tank.tscn" id="2_pj73f"]
 
 [node name="World" type="Node2D"]
 y_sort_enabled = true
 script = ExtResource("1_wqaj6")
 
+[node name="Terrain" parent="." instance=ExtResource("2_caegw")]
+
 [node name="tank" parent="." instance=ExtResource("2_pj73f")]
-position = Vector2(112, 88)
-target = Vector2(1000, 1000)
+position = Vector2(267, 267)

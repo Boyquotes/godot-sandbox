@@ -5,8 +5,5 @@ extends CharacterBody2D
 
 func _physics_process(_delta):
 	var dv = (target - position).normalized() * speed
-	dv.y /= 2  # Account for isometric geometry.
-	
 	velocity = dv
-	
 	move_and_slide()
