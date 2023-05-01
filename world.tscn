@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://world.gd" id="1_wqaj6"]
 [ext_resource type="PackedScene" uid="uid://c762cws31nr32" path="res://tank.tscn" id="2_pj73f"]
-[ext_resource type="PackedScene" uid="uid://b58ipc1ekttvi" path="res://map.tscn" id="3_t8u2p"]
+[ext_resource type="PackedScene" uid="uid://jki2kplesbsi" path="res://map.tscn" id="3_t8u2p"]
 
 [node name="World" type="Node2D"]
 y_sort_enabled = true

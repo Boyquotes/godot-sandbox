@@ -14,9 +14,11 @@ func _process(_delta):
 		var r := $Map/Render
 
 		var click_position := get_global_mouse_position()
-		click_position.y += 8
-
 		var cell: Vector2 = r.local_to_map(r.to_local(click_position))
+		
+		var test : Dictionary = $Map.get_layer_and_cell(r.to_local(click_position))
+		print(test)
+		
 		var target := to_global(l.map_to_local(cell))
 		
 		print("clicked = ", click_position, "; local = ", r.to_local(click_position), "; cell = ", cell, "; global target = ", target)

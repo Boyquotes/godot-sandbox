@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://jki2kplesbsi"]
+[gd_scene load_steps=9 format=3 uid="uid://jki2kplesbsi"]
 
 [ext_resource type="Texture2D" uid="uid://0sc0it1m7spt" path="res://assets/tilesets/map/render/tileset.png" id="2_am43y"]
 [ext_resource type="Texture2D" uid="uid://dcp1gubemlbed" path="res://assets/tilesets/map/base/tileset.png" id="2_d4tyw"]
@@ -45,15 +45,24 @@ sources/0 = SubResource("TileSetAtlasSource_mpaxq")
 texture = ExtResource("2_am43y")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
+0:0/0/texture_origin = Vector2i(0, -8)
 1:0/0 = 0
+1:0/0/texture_origin = Vector2i(0, -8)
 2:0/0 = 0
+2:0/0/texture_origin = Vector2i(0, -8)
 3:0/0 = 0
+3:0/0/texture_origin = Vector2i(0, -8)
 
 [sub_resource type="TileSet" id="TileSet_te813"]
 tile_shape = 1
 tile_layout = 5
 tile_size = Vector2i(32, 16)
 sources/0 = SubResource("TileSetAtlasSource_t0qkb")
+
+[sub_resource type="TileSet" id="TileSet_tryop"]
+tile_shape = 1
+tile_layout = 5
+tile_size = Vector2i(32, 16)
 
 [node name="Map" type="Node2D"]
 script = ExtResource("2_tbj4a")
@@ -63,6 +72,18 @@ tile_set = SubResource("TileSet_1pyjg")
 format = 2
 
 [node name="Render" type="TileMap" parent="."]
+editor_description = "Dynamically generated TileMap representation of the world.
+
+Read-only."
 y_sort_enabled = true
 tile_set = SubResource("TileSet_te813")
+format = 2
+
+[node name="Collider" type="TileMap" parent="Render"]
+editor_description = "Offset TileMap instance of the world, used for mouse-driven collision detection.
+
+The game renders each isometric tile with parts above and below the plane; we need to account for the \"top\" surface not aligning with the cell itself.
+
+Read-only."
+tile_set = SubResource("TileSet_tryop")
 format = 2
