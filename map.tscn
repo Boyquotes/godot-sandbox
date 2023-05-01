@@ -1,11 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://b58ipc1ekttvi"]
+[gd_scene load_steps=8 format=3 uid="uid://jki2kplesbsi"]
 
-[ext_resource type="Texture2D" uid="uid://dcp1gubemlbed" path="res://assets/tilesets/map/tileset.png" id="1_gjxf0"]
 [ext_resource type="Texture2D" uid="uid://0sc0it1m7spt" path="res://assets/tilesets/map/render/tileset.png" id="2_am43y"]
+[ext_resource type="Texture2D" uid="uid://dcp1gubemlbed" path="res://assets/tilesets/map/base/tileset.png" id="2_d4tyw"]
 [ext_resource type="Script" path="res://map.gd" id="2_tbj4a"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mpaxq"]
-texture = ExtResource("1_gjxf0")
+texture = ExtResource("2_d4tyw")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
