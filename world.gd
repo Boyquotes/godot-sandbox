@@ -6,20 +6,11 @@ var t = Transform2D(
 	Vector2(16, -8),  # O'
 )
 
-var u = Transform2D(
-	Vector2(2, 0),
-	Vector2(0, 2),
-	Vector2(1, 1),
-)
-func _ready():
-	print(u * Vector2(0, 0))
-	print(u * Vector2(1, 0))
-	print(u * Vector2(0, 1))
+@onready
+var l := $Terrain/Layout
 
-	print(t * Vector2(0, 0))
-	print(t * Vector2(32, 0))
-	print(t * Vector2(0, 32))
-	pass # Replace with function body.
+@onready
+var r := $Terrain/Render
 
 
 func _process(_delta):
@@ -28,8 +19,14 @@ func _process(_delta):
 		var l := $Terrain/Layout
 		var r := $Terrain/Render
 
-		var cell: Vector2 = r.local_to_map(r.to_local(get_global_mouse_position()))
-		var target := to_global(l.map_to_local(cell))
+		var click_position := get_global_mouse_position()
+		click_position.y += 8
 
-		$tank.target = target
-		$tank/Sprite2D.position = t * $tank.position
+		var cell: Vector2 = r.local_to_map(r.to_local(click_position))
+		var target := to_global(l.map_to_local(cell))
+		
+		print("clicked = ", click_position, "; local = ", r.to_local(click_position), "; cell = ", cell, "; global target = ", target)
+
+		$Tank/Character2D.target = target
+
+		# $Tank/Sprite2D.position = t * $Tank/Character2D.position

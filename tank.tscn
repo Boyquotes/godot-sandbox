@@ -6,18 +6,20 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fk11e"]
 size = Vector2(34, 34)
 
-[node name="tank" type="CharacterBody2D"]
+[node name="Tank" type="Node2D"]
+
+[node name="Character2D" type="CharacterBody2D" parent="."]
 editor_description = "Z-Index is set to be the same layer as the blocks TileMap walls layer in the world.
 
 TODO(minkezhang): Find maybe a more elegant solution."
-z_index = 1
+z_index = 10
 collision_layer = 8
 collision_mask = 2
 motion_mode = 1
 script = ExtResource("1_g00yh")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="Character2D"]
 texture = ExtResource("1_xc66o")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Character2D"]
 shape = SubResource("RectangleShape2D_fk11e")

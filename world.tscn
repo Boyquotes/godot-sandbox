@@ -10,5 +10,5 @@ script = ExtResource("1_wqaj6")
 
 [node name="Terrain" parent="." instance=ExtResource("2_caegw")]
 
-[node name="tank" parent="." instance=ExtResource("2_pj73f")]
-position = Vector2(267, 267)
+[node name="Tank" parent="." instance=ExtResource("2_pj73f")]
+position = Vector2(264, 265)

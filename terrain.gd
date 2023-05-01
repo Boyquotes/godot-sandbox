@@ -10,7 +10,7 @@ func layout_cell_to_render_cell(layer: int, ortho: Vector2i) -> Vector2i:
 
 
 func _ready():
-	#$Layout.visible = false
+	$Layout.visible = false
 	
 	for i in range($Layout.get_layers_count()):
 		$Render.add_layer(i)
