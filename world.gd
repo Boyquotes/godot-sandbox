@@ -6,18 +6,12 @@ var t = Transform2D(
 	Vector2(16, -8),  # O'
 )
 
-@onready
-var l := $Terrain/Layout
-
-@onready
-var r := $Terrain/Render
-
 
 func _process(_delta):
 	# TODO(minkezhang): Create a TileMap signal and pass this "set_target" to look up the appropriate cell.
 	if Input.is_action_just_released("select"):
-		var l := $Terrain/Layout
-		var r := $Terrain/Render
+		var l := $Map/Base
+		var r := $Map/Render
 
 		var click_position := get_global_mouse_position()
 		click_position.y += 8
